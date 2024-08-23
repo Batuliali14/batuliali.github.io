@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    .social-media {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .social-link {
+        color: #00aaff;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    
+    .social-link:hover {
+        color: #005f99;
+    }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            color: #343a40;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        .navbar .nav-link {
+            color: #ffffff !important;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffffff !important;
+            background-color: #00aaff;
+        }
+
+        header {
+            background: linear-gradient(to right, rgba(0, 170, 270, 0.5), rgba(0, 204, 254, 0.5)), url('myn.jpg')  no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 200px 0; /* Adjust the top and bottom padding to increase the height */
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #00aaff;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background-color: #00aaff;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .about, .services, .portfolio, .contact {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .about:hover, .services:hover, .portfolio:hover, .contact:hover {
+            transform: translateY(-10px);
+        }
+
+        .services .service-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .services .service-item i {
+            font-size: 3rem;
+            color: #00aaff;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .services .service-item:hover i {
+            color: #005f99;
+        }
+
+        .portfolio .portfolio-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio .portfolio-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio .portfolio-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        @media (max-width: 767px) {
+          header h1 {
+        font-size: 2rem;
+          }
+          header p {
+        font-size: 1rem;
+          }
+        .section-title {
+        font-size: 2rem;
+        }
+       .services .service-item i {
+        font-size: 2rem;
+       }
+       .services .row {
+        flex-direction: column;
+    }
+          .portfolio .row {
+        flex-direction: column;
+         }
+     }  
+
+
+
+        footer {
+            background-color: #1f1f1f;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">BATOOL ABUBAKAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Junior Web Developer | Henna Artist | Photographer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container about">
+            <h2 class="section-title">About Me</h2>
+            <p>Hello! I'm a passionate Junior web developer with a knack for creating stunning, user-friendly websites. I have experience in HTML, CSS, JavaScript, and more. I'm always excited to work on new projects and bring creative ideas to life.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="row">
+                <div class="col-md-4 services">
+                    <div class="service-item">
+                        <i class="bi bi-code-slash"></i>
+                          <h4 style="color:light-dark; font-family:Bebas Neue;">Junior Web Developer</h4>
+                          <p>Specializing in creating clean, responsive websites with a focus on user experience. <br><br>Proficient in HTML, CSS, and JavaScript, with hands-on experience in building functional and visually appealing web applications. <br><br>Enthusiastic about learning new technologies and contributing to team projects.</p>
+
+                    </div>
+                </div>
+                <div class="col-md-4 services">
+                    <div class="service-item">
+                        <i class="bi bi-palette"></i>
+                        <h4 style="color:light-dark; font-family:Bebas Neue;">Henna Artist</h4>
+                        <p>As a passionate henna artist, I create beautiful, custom designs for various occasions. <br><br>Using natural henna paste, I provide unique and temporary body art that adds a special touch to your events. <br><br>Perfect for weddings, festivals, and personal celebrations, my designs are crafted with care and creativity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 services">
+                    <div class="service-item">
+                        <i class="bi bi-bar-chart"></i>
+                        <h4 style="color:light-dark; font-family:Bebas Neue;">Photographer</h4>
+                        <p>I am a dedicated photographer with a keen eye for capturing moments and details that tell a story. <br><br>Whether it's portraits, landscapes, or events, I focus on delivering high-quality images that reflect the essence and emotions of the subject.<br><br> My approach combines technical skill with creativity to create visually compelling and memorable photographs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container portfolio">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4 portfolio-item">
+                    <img src="WhatsApp Image 2024-08-15 at 01.50.35.jpeg" alt="Project 1">
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="WhatsApp Image 2024-08-15 at 01.50.32.jpeg" alt="Project 2">
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <img src="myn.jpg" alt="Project 3" height="230">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <section id="contact" class="bg-light">
+    <div class="container contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>If you’d like to connect or have any questions, please feel free to reach out. I'm excited to collaborate and learn more!</p>
+        <p>Email: <a href="mailto:ba2799853@gmail.com">ba2799853@gmail.com</a></p>
+        <p>Phone: +254 788096336</p>
+        <p>Location: Mombasa, Kenya</p>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/batuli-ali-648186321/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/batuliali28" target="_blank" class="social-link"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="your-form-handler.php" method="post" class="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+    <p>&copy; 2024 My Portfolio. All rights reserved. <a href="#">Privacy Policy</a></p>
+    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+   </footer>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

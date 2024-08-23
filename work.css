@@ -1,0 +1,92 @@
+.navbar {
+    background-color: black;
+    overflow: hidden; /* Ensures that floated content doesn't overflow */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for layout */
+    gap: 30px; /* Adjust the value to increase or decrease the space between items */
+}
+
+.navbar li {
+    flex: 1; /* Make each item take up equal space */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+.navbar a:hover:not(.active) {
+    background-color: grey;
+}
+.active{
+	background-color: brown;
+}
+
+.carousel-caption {
+  top: 50%; /* Move the caption to the middle */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* White text */
+  padding: 10px;
+}
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Padding around the footer */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-container {
+    display: flex; /* Arrange sections side by side */
+    justify-content: space-between; /* Space sections evenly */
+    flex-wrap: wrap; /* Wrap sections if the screen is too small */
+    max-width: 1200px; /* Max width of footer content */
+    margin: 0 auto; /* Center the footer on the page */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal width */
+    min-width: 200px; /* Minimum width for each section */
+    margin: 20px; /* Margin between sections */
+}
+
+.footer-section h4 {
+    margin-bottom: 10px; /* Space below each section title */
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Space between list items */
+}
+
+.footer-section ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.social-links {
+    display: flex; /* Arrange social links side by side */
+    gap: 10px; /* Space between social links */
+}
+
+.social-links li {
+    display: inline; /* Display social links inline */
+}
